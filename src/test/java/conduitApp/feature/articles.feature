@@ -12,7 +12,7 @@ Feature: log in functionality feature
     * set articleRequestBody.article.description = dataGenerator.getRandomArticleValues().get("description")
     * set articleRequestBody.article.body = dataGenerator.getRandomArticleValues().get("body")
 
-#@ignore
+  @ignore
   Scenario: Create a new article
     Given path 'articles'
     And request articleRequestBody

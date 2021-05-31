@@ -82,7 +82,7 @@ Feature: test for the home page
     * configure retry = { count: 10, interval: 5000}
     Given params {limit: 10, offset: 0}
     Given path "/articles"
-    And retry until response.articles[0].favoritesCount == 1
+    And retry until response.articles[0].favoritesCount >= 1
     When method Get
     Then status 200
 
